@@ -1,0 +1,77 @@
+/* Fondo general y tipografía */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif; /* Fuente más elegante */
+}
+
+/* Estilo del navbar */
+.navbar {
+    background-color: black;
+}
+
+.navbar a {
+    color: beige;
+    text-decoration: none; /* Eliminar subrayado en los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+/* Sección de filtro */
+.filter-section {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Margen inferior para separación */
+}
+
+h2 {
+    color: red;
+    margin-bottom: 15px; /* Espaciado inferior para el título */
+}
+
+/* Botones */
+.btn-primary {
+    background-color: red;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn-primary:hover {
+    background-color: darkred;
+}
+
+/* Tarjetas de productos */
+.card {
+    border: 1px solid red;
+    transition: transform 0.2s, box-shadow 0.2s; /* Transición de sombra */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 30px; /* Espaciado inferior entre tarjetas */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+.card-title {
+    color: black; /* Título en negro para contraste */
+    font-size: 1.25rem; /* Tamaño de fuente más grande */
+}
+
+/* Imágenes de productos */
+.card-img-top {
+    border-top-left-radius: 5px; /* Bordes redondeados en la parte superior */
+    border-top-right-radius: 5px;
+}
+
+/* Modal del carrito */
+.modal-content {
+    border-radius: 5px; /* Bordes redondeados en el modal */
+}
