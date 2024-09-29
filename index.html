@@ -9,32 +9,34 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Velvet Verge</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
-                            Carrito <span class="badge bg-secondary" id="cart-count">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="imagenes/verge.png
+            " alt="Logo" style="height: 60px; margin-right: 20px;">Velvet Verge</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        Carrito <span class="badge bg-secondary" id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Filtros -->
     <div class="container mt-5">
@@ -50,9 +52,9 @@
             <div class="col-md-4">
                 <select class="form-select" id="filterPrice">
                     <option value="all">Todos los Precios</option>
-                    <option value="low">Bajo (menos de $50)</option>
-                    <option value="medium">Medio ($50 - $100)</option>
-                    <option value="high">Alto (más de $100)</option>
+                    <option value="low">Bajo (menos de $50000)</option>
+                    <option value="medium">Medio ($50000 - $100000)</option>
+                    <option value="high">Alto (más de $100000)</option>
                 </select>
             </div>
             <div class="col-md-4">
@@ -64,135 +66,289 @@
     <!-- Productos -->
     <div class="container mt-5">
         <div class="row" id="productList">
-            <div class="col-md-4 product" data-price="45" data-category="ropa">
+            <div class="col-md-4 product" data-price="45000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Camisa">
+                    <img src="imagenes/shein1.jpg" class="card-img-top" alt="Camisa">
                     <div class="card-body">
-                        <h5 class="card-title">Camisa</h5>
-                        <p class="card-text">Camisa de algodón suave.</p>
-                        <p class="card-text">$45</p>
+                        <h5 class="card-title">Camisa para mujer</h5>
+                        <p class="card-text">Camisa de algodón suave, color verde talla s.</p>
+                        <p class="card-text">$45000</p>
                         <button class="btn btn-success add-to-cart" data-item="Camisa">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="70" data-category="ropa">
+            <div class="col-md-4 product" data-price="70000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Chaqueta">
+                    <img src="imagenes/chaqueta.jpg" class="card-img-top" alt="Chaqueta">
                     <div class="card-body">
-                        <h5 class="card-title">Chaqueta</h5>
-                        <p class="card-text">Chaqueta ligera para clima fresco.</p>
-                        <p class="card-text">$70</p>
+                        <h5 class="card-title">Chaqueta para hombre</h5>
+                        <p class="card-text">Chaqueta ligera negra para clima fresco.</p>
+                        <p class="card-text">$70000</p>
                         <button class="btn btn-success add-to-cart" data-item="Chaqueta">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="35" data-category="ropa">
+            <div class="col-md-4 product" data-price="60000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Pantalones">
+                    <img src="imagenes/pantalon.jpg" class="card-img-top" alt="Pantalones">
                     <div class="card-body">
-                        <h5 class="card-title">Pantalones</h5>
-                        <p class="card-text">Pantalones cómodos para diario.</p>
-                        <p class="card-text">$35</p>
+                        <h5 class="card-title">Pantalones para mujer</h5>
+                        <p class="card-text">Pantalones cómodos color negro.</p>
+                        <p class="card-text">$60000</p>
                         <button class="btn btn-success add-to-cart" data-item="Pantalones">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="85" data-category="ropa">
+            <div class="col-md-4 product" data-price="85000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Vestido">
+                    <img src="imagenes/vestido.jpg" class="card-img-top" alt="Vestido">
                     <div class="card-body">
                         <h5 class="card-title">Vestido</h5>
                         <p class="card-text">Vestido elegante para ocasiones especiales.</p>
-                        <p class="card-text">$85</p>
+                        <p class="card-text">$85000</p>
                         <button class="btn btn-success add-to-cart" data-item="Vestido">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="120" data-category="accesorios">
+            <div class="col-md-4 product" data-price="60000" data-category="accesorios">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Bolso">
+                    <img src="imagenes/bolso.jpg" class="card-img-top" alt="Bolso">
                     <div class="card-body">
                         <h5 class="card-title">Bolso</h5>
-                        <p class="card-text">Bolso de mano de diseñador.</p>
-                        <p class="card-text">$120</p>
+                        <p class="card-text">Bolso de mano elegante para toda ocación.</p>
+                        <p class="card-text">$60000</p>
                         <button class="btn btn-success add-to-cart" data-item="Bolso">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="95" data-category="accesorios">
+            <div class="col-md-4 product" data-price="15000" data-category="accesorios">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Gafas de Sol">
+                    <img src="imagenes/aretes.jpg" class="card-img-top" alt="Aretes">
+                    <div class="card-body">
+                        <h5 class="card-title">Aretes</h5>
+                        <p class="card-text">Aretes elegantes para toda ocación.</p>
+                        <p class="card-text">$15000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Aretes">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="45000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/gafas.jpg" class="card-img-top" alt="Gafas de Sol">
                     <div class="card-body">
                         <h5 class="card-title">Gafas de Sol</h5>
                         <p class="card-text">Gafas de sol con protección UV.</p>
-                        <p class="card-text">$95</p>
+                        <p class="card-text">$45000</p>
                         <button class="btn btn-success add-to-cart" data-item="Gafas de Sol">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="60" data-category="accesorios">
+            <div class="col-md-4 product" data-price="25000" data-category="accesorios">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Bufanda">
+                    <img src="imagenes/collar.jpg" class="card-img-top" alt="Collar">
+                    <div class="card-body">
+                        <h5 class="card-title">Collar</h5>
+                        <p class="card-text">Juego de collar elegante.</p>
+                        <p class="card-text">$25000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Collar">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="60000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/bufanda.jpg" class="card-img-top" alt="Bufanda">
                     <div class="card-body">
                         <h5 class="card-title">Bufanda</h5>
-                        <p class="card-text">Bufanda de lana para invierno.</p>
-                        <p class="card-text">$60</p>
+                        <p class="card-text">Bufanda unicolor para invierno.</p>
+                        <p class="card-text">$60000</p>
                         <button class="btn btn-success add-to-cart" data-item="Bufanda">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="75" data-category="ropa">
+            <div class="col-md-4 product" data-price="75000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Sudadera">
+                    <img src="imagenes/sudadera.jpg" class="card-img-top" alt="Sudadera">
                     <div class="card-body">
                         <h5 class="card-title">Sudadera</h5>
-                        <p class="card-text">Sudadera cómoda para el frío.</p>
-                        <p class="card-text">$75</p>
+                        <p class="card-text">Sudadera cómoda para el frío unicolor.</p>
+                        <p class="card-text">$75000</p>
                         <button class="btn btn-success add-to-cart" data-item="Sudadera">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="150" data-category="accesorios">
+            <div class="col-md-4 product" data-price="85000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Reloj">
+                    <img src="imagenes/deportivo.jpg" class="card-img-top" alt="Deportivo">
+                    <div class="card-body">
+                        <h5 class="card-title">Conjuntos deportivos</h5>
+                        <p class="card-text">Set de 3 conjuntos deprotivos.</p>
+                        <p class="card-text">$85000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Deportivo">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="75000" data-category="ropa">
+                <div class="card">
+                    <img src="imagenes/faldajean.jpg" class="card-img-top" alt="Falda">
+                    <div class="card-body">
+                        <h5 class="card-title">Falda en jean</h5>
+                        <p class="card-text">Falda en jean tono claro.</p>
+                        <p class="card-text">$50000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Falda">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="75000" data-category="ropa">
+                <div class="card">
+                    <img src="imagenes/jeandama.jpg" class="card-img-top" alt="Jean">
+                    <div class="card-body">
+                        <h5 class="card-title">Jean para dama</h5>
+                        <p class="card-text">Jean para dama color gris.</p>
+                        <p class="card-text">$75000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Jean">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="85000" data-category="ropa">
+                <div class="card">
+                    <img src="imagenes/pantalonhombre.jpg" class="card-img-top" alt="pantalonhombre">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantalon para caballero</h5>
+                        <p class="card-text">Pantalon oscuro para caballero.</p>
+                        <p class="card-text">$85000</p>
+                        <button class="btn btn-success add-to-cart" data-item="pantalonhombre">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="55000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/reloj.jpg" class="card-img-top" alt="Reloj">
                     <div class="card-body">
                         <h5 class="card-title">Reloj</h5>
-                        <p class="card-text">Reloj de pulsera elegante.</p>
-                        <p class="card-text">$150</p>
+                        <p class="card-text">Reloj de pulsera inteligente.</p>
+                        <p class="card-text">$55000</p>
                         <button class="btn btn-success add-to-cart" data-item="Reloj">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <!-- Más productos -->
-            <div class="col-md-4 product" data-price="30" data-category="ropa">
+            <div class="col-md-4 product" data-price="45000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Camiseta">
+                    <img src="imagenes/camisa.jpg" class="card-img-top" alt="Camisa">
                     <div class="card-body">
-                        <h5 class="card-title">Camiseta</h5>
+                        <h5 class="card-title">Camisa para caballero</h5>
+                        <p class="card-text">Camisa sencilla para caballero.</p>
+                        <p class="card-text">$85000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Camisa">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="105000" data-category="ropa">
+                <div class="card">
+                    <img src="imagenes/vestido2.jpg" class="card-img-top" alt="Vestidodos">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido</h5>
+                        <p class="card-text">Vestido elegnate con estampado.</p>
+                        <p class="card-text">$105000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Vestidodos">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="115000" data-category="ropa">
+                <div class="card">
+                    <img src="imagenes/conjunto.jpg" class="card-img-top" alt="Conjuntoh">
+                    <div class="card-body">
+                        <h5 class="card-title">Conjunto deportivo</h5>
+                        <p class="card-text">Conjunto deportivo para caballero.</p>
+                        <p class="card-text">$115000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Conjuntoh">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-4 product" data-price="85000" data-category="accesorios">
+                    <div class="card">
+                        <img src="imagenes/pulsera.jpg" class="card-img-top" alt="Pulsera">
+                        <div class="card-body">
+                            <h5 class="card-title">Pulsera</h5>
+                            <p class="card-text">Pulsera para caballero en plata.</p>
+                            <p class="card-text">$85000</p>
+                            <button class="btn btn-success add-to-cart" data-item="Pulsera">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-4 product" data-price="55000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/cadena.jpg" class="card-img-top" alt="Cadena">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadena</h5>
+                        <p class="card-text">Cadena para caballero.</p>
+                        <p class="card-text">$55000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Cadena">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="15000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/gafashombre.jpg" class="card-img-top" alt="Gafashombre">
+                    <div class="card-body">
+                        <h5 class="card-title">Gafas</h5>
+                        <p class="card-text">Gafas para caballero oscuras.</p>
+                        <p class="card-text">$15000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Gafashombre">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="65000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/relojcaballero.jpg" class="card-img-top" alt="relojhombre">
+                    <div class="card-body">
+                        <h5 class="card-title">Reloj</h5>
+                        <p class="card-text">Reloj para caballero.</p>
+                        <p class="card-text">$65000</p>
+                        <button class="btn btn-success add-to-cart" data-item="relojhombre">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Más productos -->
+            <div class="col-md-4 product" data-price="30000" data-category="ropa">
+                <div class="card">
+                    <img src="imagenes/camiseta.jpg" class="card-img-top" alt="Camiseta">
+                    <div class="card-body">
+                        <h5 class="card-title">Camiseta para hombre</h5>
                         <p class="card-text">Camiseta básica de algodón.</p>
-                        <p class="card-text">$30</p>
+                        <p class="card-text">$30000</p>
                         <button class="btn btn-success add-to-cart" data-item="Camiseta">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="55" data-category="accesorios">
+            <div class="col-md-4 product" data-price="30000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Cinturón">
+                    <img src="imagenes/top.jpg" class="card-img-top" alt="Top">
                     <div class="card-body">
-                        <h5 class="card-title">Cinturón</h5>
+                        <h5 class="card-title">Blusa</h5>
+                        <p class="card-text">Blusa para mujer con estampado floral.</p>
+                        <p class="card-text">$30000</p>
+                        <button class="btn btn-success add-to-cart" data-item="Top">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product" data-price="35000" data-category="accesorios">
+                <div class="card">
+                    <img src="imagenes/cinturon.jpg" class="card-img-top" alt="Cinturón">
+                    <div class="card-body">
+                        <h5 class="card-title">Cinturón unisex</h5>
                         <p class="card-text">Cinturón de cuero auténtico.</p>
-                        <p class="card-text">$55</p>
+                        <p class="card-text">$35000</p>
                         <button class="btn btn-success add-to-cart" data-item="Cinturón">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 product" data-price="20" data-category="ropa">
+            <div class="col-md-4 product" data-price="50000" data-category="ropa">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Calcetines">
+                    <img src="imagenes/falda.jpg" class="card-img-top" alt="Calcetines">
                     <div class="card-body">
-                        <h5 class="card-title">Calcetines</h5>
-                        <p class="card-text">Paquete de calcetines coloridos.</p>
-                        <p class="card-text">$20</p>
+                        <h5 class="card-title">Falda larga</h5>
+                        <p class="card-text">Falda con estilo flowy</p>
+                        <p class="card-text">$50000</p>
                         <button class="btn btn-success add-to-cart" data-item="Calcetines">Agregar al Carrito</button>
                     </div>
                 </div>
@@ -200,23 +356,38 @@
         </div>
     </div>
 
-    <!-- Modal del Carrito -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="cart-items">
-                    No hay productos en el carrito.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="cart-items" style="max-height: 400px; overflow-y: auto;">
+                <p>No hay productos en el carrito.</p>
+            </div>
+            <div class="modal-body" id="total-price">
+                <p>Total: $0</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="pay-button" style="display: none;">Pagar</button>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Pie de Página -->
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+        © 2024 Velvet Verge. Todos los derechos reservados.
+        <br>
+        <a class="text-dark" href="contacto.html">Contacto</a> | <a class="text-dark" href="terminos.html">Términos y Condiciones</a>
+    </div>
+</footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

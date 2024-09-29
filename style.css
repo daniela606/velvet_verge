@@ -1,37 +1,61 @@
 /* Fondo general y tipografía */
 body {
-    background-color: #f5f5f5;
+    background-color: #f1dada;
     color: #333;
     font-family: Arial, sans-serif; /* Fuente más elegante */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding-top: 60px; /* Espacio en la parte superior para el navbar fijo */
 }
 
 /* Estilo del navbar */
 .navbar {
     background-color: black;
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 10px 0; /* Espacio alrededor del contenido */
 }
 
-.navbar a {
-    color: beige;
-    text-decoration: none; /* Eliminar subrayado en los enlaces */
-    font-weight: bold; /* Negrita para los enlaces */
-}
-
+/* Enlaces de la barra de navegación */
 .navbar a:hover {
     color: red;
 }
 
-/* Sección de filtro */
-.filter-section {
-    background-color: beige;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Margen inferior para separación */
+/* Estilo para los encabezados de términos y condiciones */
+.terms-container h1 {
+    color: #8B0000; /* Color rojo oscuro */
+    font-size: 1.5rem; /* Tamaño moderado para el título principal */
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
 }
 
-h2 {
-    color: red;
-    margin-bottom: 15px; /* Espaciado inferior para el título */
+.terms-container h2 {
+    color: red; /* Color para subtítulos */
+    font-size: 1.25rem; /* Tamaño más pequeño para subtítulos */
+    margin-top: 20px; /* Espacio superior para los subtítulos */
+}
+
+.terms-container h3 {
+    color: #333; /* Color estándar para títulos secundarios */
+    font-size: 1.1rem; /* Tamaño más pequeño para títulos secundarios */
+    margin-top: 15px; /* Espacio superior para títulos secundarios */
+}
+
+.terms-container p {
+    text-align: justify; /* Justificar texto */
+    line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+}
+
+/* Contenedor de términos y condiciones */
+.terms-container {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px; /* Espacio interno */
+    margin: 20px auto; /* Centra el contenedor en la página */
+    max-width: 800px; /* Ancho máximo para el contenedor */
 }
 
 /* Botones */
@@ -41,37 +65,71 @@ h2 {
     border-radius: 5px; /* Bordes redondeados */
     padding: 10px 20px; /* Espaciado dentro del botón */
     transition: background-color 0.3s; /* Transición suave */
+    font-weight: bold; /* Hace que el texto del botón sea más destacado */
 }
 
 .btn-primary:hover {
-    background-color: darkred;
+    background-color: darkred; /* Color en hover */
+}
+
+/* Contenedor de tarjetas */
+.card-container {
+    display: flex; /* Habilita flexbox para el contenedor de tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias líneas */
+    justify-content: space-between; /* Asegura un espaciado entre las tarjetas */
+    padding: 20px; /* Espacio interno alrededor del contenedor */
 }
 
 /* Tarjetas de productos */
 .card {
+    display: flex; /* Habilita flexbox para las tarjetas */
+    flex-direction: column; /* Organiza los hijos en columnas */
     border: 1px solid red;
     transition: transform 0.2s, box-shadow 0.2s; /* Transición de sombra */
     border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 30px; /* Espaciado inferior entre tarjetas */
+    height: 100%; /* Asegura que todas las tarjetas llenen el contenedor */
+    margin: 10px; /* Espacio alrededor de cada tarjeta */
+    margin-top: 20px; /* Margen superior para separar de la tarjeta de arriba */
 }
 
+/* Efecto de aumento al pasar el mouse */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra en hover */
-}
-
-.card-title {
-    color: black; /* Título en negro para contraste */
-    font-size: 1.25rem; /* Tamaño de fuente más grande */
 }
 
 /* Imágenes de productos */
 .card-img-top {
     border-top-left-radius: 5px; /* Bordes redondeados en la parte superior */
     border-top-right-radius: 5px;
+    height: 400px; /* Aumenta la altura de las imágenes */
+    object-fit: cover; /* Mantiene la proporción y cubre el espacio sin distorsionar */
+}
+
+/* Contenedor del cuerpo de la tarjeta */
+.card-body {
+    display: flex; /* Habilita flexbox para el cuerpo de la tarjeta */
+    flex-grow: 1; /* Permite que el cuerpo crezca para llenar el espacio disponible */
+    flex-direction: column; /* Organiza los hijos en columnas */
 }
 
 /* Modal del carrito */
 .modal-content {
     border-radius: 5px; /* Bordes redondeados en el modal */
+}
+
+.modal-body p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #343a40;
+    color: rgb(17, 17, 17);
+    padding: 15px 0;
+}
+
+footer a {
+    color: #f8f9fa; /* Color de enlaces en el pie de página */
 }
